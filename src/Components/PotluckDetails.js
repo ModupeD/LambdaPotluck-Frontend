@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {editPotluck, getPotluck, listPotlucks} from "../Backend/api";
 import {Link, useParams} from 'react-router-dom';
 import Guest from "./Guest";
-
+import styled from "styled-components";
 const PotluckDetails = ({handleModify}) => {
 
     const {id} = useParams();
@@ -117,9 +117,18 @@ const PotluckDetails = ({handleModify}) => {
         });
     }
 
+    const StyledDetails = styled.div`
+       padding: 10%;
+    `
+    const BackButton = styled.button`
+        text-decoration: none;
+        background-color: ghostwhite;
+        padding: 1%;
+    `
     return (
         <div>
-            <Link to="/">Go Back</Link>
+            <StyledDetails>
+         <Link to="/"><BackButton>Go Back</BackButton></Link>
 
             <p>{statusMessage}</p>
 
@@ -154,7 +163,7 @@ const PotluckDetails = ({handleModify}) => {
             {guests.map(f=>(
                 <Guest key={f.id} data={f} handleRemove={removeGuest} handleUpdate={handleGuestUpdate}/>
             ))}
-
+            </StyledDetails>
 
         </div>
     );

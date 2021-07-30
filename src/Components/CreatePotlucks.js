@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {createPotluck} from '../Backend/api';
+import styled from "styled-components";
 
 const CreatePotluck = ({handleCreate}) => {
 
@@ -20,17 +21,22 @@ const CreatePotluck = ({handleCreate}) => {
         handleCreate();
     }
 
+    const StyledDiv = styled.div`
+       display: flex;
+       justify-content: center;  
+    `
+
     return (
-        <div>
-            <form onSubmit={makePotluck}>
+        <form onSubmit={makePotluck}>
+                <StyledDiv>
                 <input type="text" value={title} onChange={e=>setTitle(e.target.value)} placeholder="Potluck Name"/>
                 <input type="text" value={date} onChange={e=>setDate(e.target.value)} placeholder="Potluck Date"/>
                 <input type="text" value={time} onChange={e=>setTime(e.target.value)} placeholder="Potluck Time"/>
                 <input type="text" value={location} onChange={e=>setLocation(e.target.value)} placeholder="Potluck Location"/>
 
                 <input type="submit" value="Create a Potluck"/>
+        </StyledDiv>
             </form>
-        </div>
     );
 };
 

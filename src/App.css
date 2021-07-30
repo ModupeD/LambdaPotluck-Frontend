@@ -1,5 +1,4 @@
 
-
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
@@ -11,7 +10,6 @@
   color: white;
 }
 
-.potluck {
-  border: 1px solid black;
-  background-color: grey;
+h1 {
+  color: white
 }
