@@ -1,15 +1,14 @@
-
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(248, 197, 168);
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(189, 101, 0);
 }
 
 h1 {
-  color: white
+  color: rgb(189, 101, 0);
 }
